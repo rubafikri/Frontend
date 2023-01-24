@@ -1,0 +1,44 @@
+<ngx-loading-bar></ngx-loading-bar>
+
+<ng-container *ngIf="loadderdBooks">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 mt-5" *ngFor="let book of loadderdBooks">
+        <a [routerLink]="['/BookList', book.id]">
+          <img
+            [src]="imgSrc + book.image"
+            alt="ded"
+            style="width: 150px; height: 200px"
+          />
+        </a>
+        <div class="name">
+          <p>{{ book.name }}</p>
+        </div>
+        <div class="price" style="display: flex; flex-direction: row">
+          <p>${{ book.price }}.00</p>
+          <p
+            style="
+              padding-right: 5px;
+              color: grey;
+              font-weight: 100;
+              font-size: small;
+              text-decoration: line-through;
+            "
+            *ngIf="book.discount > 0"
+          >
+            ${{ book.discount }}.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="loadderdBooks.length == 0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>لا يوجد بيانات لعرضها يرجى اضافة المزيد من الكتب ال المفضلة</h1>
+      </div>
+    </div>
+  </div>
+</ng-container>

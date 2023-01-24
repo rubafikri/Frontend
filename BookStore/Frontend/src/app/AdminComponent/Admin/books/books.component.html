@@ -1,0 +1,182 @@
+<div class="container mt-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a>الرئيسية</a></li>
+      <li class="breadcrumb-item active" aria-current="page">الكتب</li>
+    </ol>
+  </nav>
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="BooksForm" (ngSubmit)="onSubmit()">
+        <!-- Name -->
+        <div>
+          <label class="form-label">اسم الكتاب </label>
+          <input type="text" class="form-control" formControlName="name" />
+          <p *ngIf="!name.valid && name.touched">من فضلك أضف اسم كتاب جديد</p>
+        </div>
+        <!-- Price -->
+        <div>
+          <label class="form-label">سعر الكتاب </label>
+          <input type="text" class="form-control" formControlName="price" />
+          <p *ngIf="!price.valid && price.touched">من فضلك أضف سعر كتاب</p>
+        </div>
+        <!-- Disscount -->
+        <div>
+          <label class="form-label">قيمة الخصم </label>
+          <input type="text" class="form-control" formControlName="discount" />
+        </div>
+        <!-- About -->
+        <div>
+          <label class="form-label"> حول الكتاب </label>
+          <textarea
+            type="text"
+            class="form-control"
+            formControlName="about"
+          ></textarea>
+          <p *ngIf="!about.valid && about.touched">من فضلك أضف وصف عن الكتاب</p>
+        </div>
+        <!-- Image -->
+        <div class="mb-3">
+          <label for="logo">شعار دار النشر</label>
+          <input
+            (change)="onFileChange($event)"
+            formControlName="file"
+            class="form-control"
+            type="file"
+            id="logo"
+          />
+        </div>
+        <div class="mb-4">
+          <div class="progress">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-label="Example with label"
+              [ngStyle]="{ width: progressValue }"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              {{ progressValue }}
+            </div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <img
+            alt="helo"
+            class="img-thumbnail"
+            [src]="imageSrc || 'https://via.placeholder.com/200'"
+          />
+        </div>
+
+        <!-- Publisher Year -->
+        <div>
+          <label class="form-label"> سنة النشر </label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="publishYear"
+          />
+          <p *ngIf="!publishYear.valid && publishYear.touched">
+            من فضلك أضف سنة نشر الكتاب
+          </p>
+        </div>
+        <!-- Page Count -->
+        <div>
+          <label class="form-label">عدد صفحات الكتاب </label>
+          <input type="text" class="form-control" formControlName="pageCount" />
+          <p *ngIf="!pageCount.valid && pageCount.touched">
+            من فضلك أضف عدد صفحات الكتاب
+          </p>
+        </div>
+        <!-- Publisher Id -->
+        <div class="mb-3">
+          <label class="form-label">اختر اسم دار النشر </label>
+          <select formControlName="publisherId" class="form-select">
+            <option
+              value="{{ publisherid.id }}"
+              *ngFor="let publisherid of publishers"
+            >
+              {{ publisherid.name }}
+            </option>
+            <option value="teacher"></option>
+          </select>
+        </div>
+
+        <!-- Author Id  -->
+        <div class="mb-3">
+          <label class="form-label"> اختر اسم الكاتب </label>
+          <select formControlName="authorId" class="form-select">
+            <option value="{{ authorid.id }}" *ngFor="let authorid of authors">
+              {{ authorid.name }}
+            </option>
+            <option value="teacher"></option>
+          </select>
+        </div>
+
+        <!-- Category Id -->
+        <div class="mb-3">
+          <label class="form-label">اختر فئة الكتاب </label>
+          <select formControlName="CategoryId" class="form-select">
+            <option
+              value="{{ categoryid.id }}"
+              *ngFor="let categoryid of categories"
+            >
+              {{ categoryid.name }}
+            </option>
+            <option value="teacher"></option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary m-4">
+          أضف كتاب جديدة
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="col-md-10">
+  <table class="table ms-5 table-responsive">
+    <thead>
+      <tr>
+        <th scope="col">اسم الكتاب</th>
+        <th scope="col">سعر الكتاب</th>
+        <th scope="col">قيمة الخصم</th>
+        <th scope="col">عدد صفحات الكتاب</th>
+        <th scope="col">سنة نشر الكتاب</th>
+        <th scope="col">دار النشر</th>
+        <th scope="col">اسم المؤلف</th>
+        <th scope="col">اسم الفئة</th>
+        <th scope="col">صورة الكتاب</th>
+
+        <th scope="col">تعديل</th>
+        <th scope="col">حذف</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>
+          <a [routerLink]="['/BookList', book.id]"> {{ book.name }} </a>
+        </td>
+        <td>{{ book.price }}</td>
+        <td>{{ book.discount }}</td>
+        <td>{{ book.pageCount }}</td>
+        <td>{{ book.publishYear }}</td>
+        <td>{{ book.publisher.name }}</td>
+        <td>{{ book.author.name }}</td>
+        <td>{{ book.category.name }}</td>
+        <td>
+          <img [src]="imgSrc + book.image" alt="lkjhgf" style="width: 40px" />
+        </td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="onDeleteBook(book.id)"
+          >
+            تعديل
+          </button>
+        </td>
+        <td><button type="button" class="btn btn-danger">حذف</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

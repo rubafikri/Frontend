@@ -1,0 +1,67 @@
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a>الرئيسية</a></li>
+      <li class="breadcrumb-item active" aria-current="page">
+        الصفحات الثابتة
+      </li>
+    </ol>
+  </nav>
+  <div class="row m-3">
+    <div class="col-md-8">
+      <form [formGroup]="StaticPageForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label class="form-label"> اسم الصفحة </label>
+          <input type="text" class="form-control" formControlName="pageName" />
+        </div>
+        <div>
+          <label class="form-label"> تفاصيل الصفحة </label>
+          <textarea
+            type="text"
+            class="form-control"
+            formControlName="details"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary m-4" *ngIf="updateded">
+          أضف صفحة جديدة
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary m-4"
+          *ngIf="!updateded"
+          (click)="onUpdate()"
+        >
+          تعديل الصفحة
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="col-md-10">
+  <table class="table ms-5 table-responsive">
+    <thead>
+      <tr>
+        <th scope="col">اسم الصفحة</th>
+        <th scope="col">تفاصيل الصفحة</th>
+        <th scope="col">تعديل</th>
+        <th scope="col">حذف</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let page of loadedStaticPages">
+        <td>{{ page.pageName }}</td>
+        <td>{{ page.details }}</td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="populateForm(page)"
+          >
+            تعديل
+          </button>
+        </td>
+        <td><button type="button" class="btn btn-danger"  (click)="onDeleteAuthors(page.id)">حذف</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

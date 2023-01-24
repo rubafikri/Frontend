@@ -1,0 +1,45 @@
+<ngx-loading-bar></ngx-loading-bar>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="suggestBookForm" (ngSubmit)="addBookSuggest()">
+        <div>
+          <label class="form-label">اسم الكتاب </label>
+          <input type="text" class="form-control" formControlName="bookName" />
+        </div>
+        <div>
+          <label class="form-label">البريد الإلكتروني </label>
+          <input type="text" class="form-control" formControlName="email" />
+        </div>
+        <div>
+          <label class="form-label">اسم دار النشر </label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="publisherName"
+          />
+        </div>
+        <div>
+          <label class="form-label">اسم الكاتب </label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="authorName"
+          />
+        </div>
+        <div>
+          <label class="form-label">ملاحظات </label>
+          <input type="text" class="form-control" formControlName="notes" />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary m-4"
+          [disabled]="!suggestBookForm.valid"
+        >
+          أضف اقتراح لكتاب جديد
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

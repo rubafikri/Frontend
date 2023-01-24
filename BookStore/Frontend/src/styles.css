@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+footer {
+  background-color: #009c96;
+}
+
+@font-face {
+  font-family: "HelveticaNeueLT Arabic 55 Roman";
+  src: url("./assets/fonts/HelveticaNeueLTArabic-Roman.woff2") format("woff2"),
+    url("./assets/fonts/HelveticaNeueLTArabic-Roman.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "HelveticaNeueLT Arabic 55 Roman";
+}
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

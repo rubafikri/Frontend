@@ -1,0 +1,56 @@
+<ng-container *ngIf="loadedBookSuggestion">
+  <!-- Get All Book Suggestion  -->
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a>الرئيسية</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          اقتراحات الكتب
+        </li>
+      </ol>
+    </nav>
+    <div class="col-md-12">
+      <table class="table ms-5 table-responsive">
+        <thead>
+          <tr>
+            <th scope="col">اسم الكتاب</th>
+            <th scope="col">اسم المؤلف</th>
+            <th scope="col">البريد الالكتروني</th>
+            <th scope="col">اسم دار النشر</th>
+            <th scope="col">ملاحظات</th>
+
+            <th scope="col">حالة القراءة</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let suggest of loadedBookSuggestion">
+            <td>{{ suggest.bookName }}</td>
+            <td>{{ suggest.authorName }}</td>
+            <td>{{ suggest.email }}</td>
+            <td>{{ suggest.publisherName }}</td>
+            <td>{{ suggest.notes }}</td>
+
+            <td *ngIf="!suggest.readAt">
+              <button
+                type="button"
+                class="btn btn-danger"
+                (click)="onUpdate(suggest.id)"
+              >
+                تعديل كمقرؤ
+              </button>
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-success"
+                *ngIf="suggest.readAt"
+              >
+                تمت القراءة
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ng-container>

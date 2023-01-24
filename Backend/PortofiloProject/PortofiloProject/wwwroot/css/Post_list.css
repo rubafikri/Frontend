@@ -1,0 +1,162 @@
+body,
+html {
+
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 100%;
+
+}
+
+.left {
+    background-color: #F6F6F6;
+    position: fixed;
+    width: 300px;
+    height: 400px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #8D93AB;
+}
+
+.imageclock {
+    padding-right: 10px;
+   
+}
+
+.title {
+    font-size: 40px;
+    margin: auto;
+}
+
+.bodyPara {
+    font-size: 16px;
+}
+
+.cont {
+    margin-left: 300px;
+    position: relative;
+    padding-left: 30px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    max-width: 50%;
+    margin-left: 300px;
+}
+
+.profileImg {
+    padding: 50px 50px 0px 50px;
+}
+
+.name {
+    font-size: 25px;
+    padding-left: 50px;
+
+}
+
+.job {
+    font-size: 15px;
+    padding-left: 50px;
+    color: #3F3D56;
+
+}
+
+.socialIcons {
+    padding-left: 50px;
+    align-items: center;
+
+}
+
+.socialIcons img {
+    width: 30px;
+    padding-right: 10px;
+}
+a{
+    color: #FF8E6E;
+}
+@media screen and (max-width : 700px) {
+    body {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        margin: auto;
+        position: relative;
+        min-width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        flex-direction: column;
+        margin-right: 10px;
+        /* max-width: 100%; */
+    }
+
+    .secondrow {
+        flex-direction: column;
+    }
+
+    .name {
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .job {
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .socialIcons {
+        padding-left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .personimg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cont {
+        /* align-items: center; */
+        justify-items: center;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .content {
+        /* position: relative; */
+        max-width: 100%;
+    }
+      
+}

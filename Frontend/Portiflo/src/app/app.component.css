@@ -1,0 +1,103 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+.container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  height: 100%;
+}
+.personimg {
+  padding-left: 46px;
+  padding-top: 43px;
+}
+
+.cont {
+  position: relative;
+  margin-left: 370px;
+  padding-left: 30px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  background-color: #f6f6f6;
+  position: fixed;
+  width: 300px;
+  height: 400px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+}
+.name {
+  font-size: 25px;
+  padding-left: 50px;
+}
+
+.job {
+  font-size: 15px;
+  padding-left: 50px;
+  color: #3f3d56;
+}
+
+.socialIcons {
+  padding-left: 50px;
+  align-items: center;
+}
+
+.socialIcons img {
+  width: 30px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    margin: auto;
+    position: relative;
+    min-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .name {
+    text-align: center;
+    padding-left: 0px;
+  }
+
+  .job {
+    text-align: center;
+    padding-left: 0px;
+  }
+
+  .socialIcons {
+    padding-left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+
+  .personimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

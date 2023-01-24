@@ -1,0 +1,18 @@
+<h5>Edit  Todo</h5>
+
+<div>
+    <label>Title</label>
+    <input type="text"  class="form-control" [(ngModel)]="title" />
+</div>
+<div>
+    <label>Description</label>
+    <input type="text" name="Description" class="form-control"  [(ngModel)]="description" />
+</div>
+<div class="checkbox">
+    <label>
+        <input type="checkbox" data-toggle="toggle"  [(ngModel)] = "isImportant">Important
+    </label>
+    </div>
+<div class="my-2">
+    <button class="btn btn-warning" (click)="onUpdateTodo()"> Edit Todo</button>
+</div>

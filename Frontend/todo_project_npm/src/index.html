@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Do App</title>
+  <link rel="stylesheet" href="style.scss" />
+
+</head>
+
+<body style="margin-left: 50px;">
+  <div class="container">
+  <div class="todo-list row">
+
+  </div>
+    <form class="mb-5 mt-3">
+      <div class="mb-3">
+        <label class="form-label" >Task</label>
+        <input type="text" class="form-control" id="TaskAdd">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Is Completed </label>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="IsCompletedCheck">
+          <label class="form-check-label" for="exampleCheck1"></label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Created At</label>
+        <input type="date" class="form-control" id="CreatedAt">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Description</label>
+        <input type="text" class="form-control" id="Description">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Category</label>
+        <input type="text" class="form-control" id="Category">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">TodoCategory</label>
+        <input type="text" class="form-control" id="ToDoCategory">
+      </div>
+      <button type="submit" class="btn btn-primary" id="btnAddData">Submit</button>
+      <button type="submit" class="btn btn-primary" id="btnEditData" style="visibility: hidden;">Edit</button>
+
+    </form>
+  </div>
+  <script type="module" src="script.js"></script>
+
+</body>
+
+</html>

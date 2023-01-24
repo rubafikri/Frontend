@@ -1,0 +1,48 @@
+﻿@model List<Customer>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch_javascript</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body>
+     <div class="container">
+        <div class="row">
+            <div class="col-md-12 my-3">
+                <a class="btn btn-primary w-100" id="GetAllCustomers" asp-action="Index">Get Customers Full Names</a>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <form id="CustomerAddForm" class="w-100 d-flex flex-row" method="post" asp-action="Add">
+                    <input id="FirstName" name="FirstName" class="form-control" />
+                     <input id="LastName" name="LastName" class="form-control" />
+                    <button id="AddNewCustomer" class="btn btn-primary flex-shrink-0 ms-2" type="submit">Add Customer</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div id="LoadingSpinner"></div>
+        </div>
+        <div class="row">
+            <ul class="list-group" id="CustomerList">
+              @foreach (var item in Model)
+              {
+                      <li class="list-group-item">@item.FirstName  @item.LastName </li>
+              }
+            </ul>
+        </div>
+        </div>
+
+        <script  src="~/js/JavaScript.js"></script>
+
+</body>
+</html>

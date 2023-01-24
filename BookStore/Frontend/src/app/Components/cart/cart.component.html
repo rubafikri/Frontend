@@ -1,0 +1,85 @@
+<ngx-loading-bar></ngx-loading-bar>
+
+<ng-container *ngIf="saleFound && userFound">
+  <div class="container mt-3">
+    <div class="col-md-3 mt-3">
+      <h2 style="color: #019a95; font-weight: bold">سلة المشتريات</h2>
+      <hr />
+    </div>
+  </div>
+  <div class="col-md-10 mx-5">
+    <table class="table ms-5 table-responsive">
+      <thead>
+        <tr>
+          <th scope="col">اسم الكتاب</th>
+          <th scope="col">سعر الكتاب</th>
+          <th scope="col">الكمية المطلوبة</th>
+          <th scope="col">الاجمالي</th>
+          <th scope="col">حالة الطلب</th>
+          <th scope="col">حذف</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sale of loadedSale">
+          <td>{{ sale.book.name }}</td>
+          <td>{{ sale.book.price }}</td>
+          <td>{{ sale.amount }}</td>
+          <td>{{ sale.totalPrice }}</td>
+          <td *ngIf="sale.isSold == 0">قيد الموافقة</td>
+          <td *ngIf="sale.isSold == 1">تمت الموافقة</td>
+          <td>
+            <button class="btn btn-danger" (click)="open(mymodal)">
+              إزالة من السلة
+            </button>
+
+            <ng-template #mymodal let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">
+                  تأكيد الحذف من السلة
+                </h4>
+
+                <button
+                  type="button"
+                  class="close"
+                  aria-label="Close"
+                  (click)="modal.dismiss('Cross click')"
+                >
+                  <span aria-hidden="true">X</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+                هل أنت متأكد من إزالة هذا الكتاب من السلة
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn"
+                  (click)="modal.close(deleteSale(sale.id))"
+                >
+                  نعم
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  (click)="modal.close('Save click')"
+                >
+                  لا
+                </button>
+              </div>
+            </ng-template>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
+<ng-container *ngIf="!saleFound && userFound">
+  <h1 class="mt-5 mb-5">
+    لا يوجد بيانات لعرضها في السلة يرجى الذهاب وإضافة كتب جديدة
+  </h1></ng-container
+>
+
+<ng-container *ngIf="!userFound">
+  <app-login></app-login>
+</ng-container>

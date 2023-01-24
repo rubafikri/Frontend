@@ -1,0 +1,65 @@
+﻿@model List<Project>
+
+@{
+    Layout = "_Layout";
+}
+
+
+<head> 
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<body style="margin-left: 50px;">
+<h1>Post List</h1>
+
+<p style="text-align:right;margin-right:20px;">
+    <a class="btn btn-outline-primary" asp-action="Add">Create New</a>
+</p>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Body            
+                </th>
+                <th>
+                   Image
+                </th>
+                <th></th>
+                <th>Edit </th>
+                <th>Details </th>
+                <th>Delete </th>
+            </tr>
+        </thead>
+        <tbody>
+                @foreach (var item in Model)
+                {
+                            <tr>
+                                <td>
+                            @item.Title
+                                </td>
+                                <td>
+                             @item.Body
+                                </td>
+                                <td>
+                                    <img src=~/Photos/@item.ImageName alt="" asp-append-version="true" width="50px" height="50px">
+                                </td>
+                                <td>
+                                <td class="text-center">
+                                    <a asp-action="Edit" class="btn btn-outline-primary"  asp-route-id ="@item.Id">Edit</a>
+                                </td>
+                                <td class="text-center">
+                                    <a asp-action="Details" class="btn btn-outline-info"  asp-route-id="@item.Id">Details</a>
+                                </td>
+                                <td class="text-center">
+                                    <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id ="@item.Id">Delete</a>
+                                </td>
+                            </tr>
+                }
+        </tbody>
+    </table>
+    </div>
+    </body>

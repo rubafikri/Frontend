@@ -1,0 +1,84 @@
+<div class="ff" *ngIf="!get">
+  <div
+    *ngIf="newBook"
+    class="col-md-4 col-12 mt-3 gg"
+    style="background-color: red"
+  >
+    <img [src]="imgSrc + newBook.image" alt="" class="img-thumbnail imgBook" />
+    <div class="content">
+      <p style="color: white">اصدارات جديـــــــدة</p>
+      <button
+        type="button"
+        class="btn1 btn mb-5"
+        [routerLink]="['/BookList', newBook.id]"
+      >
+        اشتري الان
+      </button>
+    </div>
+  </div>
+
+  <div
+    *ngIf="new2Book"
+    class="col-md-4 col-12 mt-3 gg"
+    style="background-color: #153e76"
+  >
+    <img [src]="imgSrc + new2Book.image" alt="" class="img-thumbnail imgBook" />
+    <div class="content">
+      <p style="color: white">أكثر مبيعاً</p>
+      <button
+        type="button"
+        class="btn btn2 mb-5"
+        [routerLink]="['/BookList', new2Book.id]"
+      >
+        اشتري الان
+      </button>
+    </div>
+  </div>
+  <div
+    class="col-md-4 col-12 mt-3 gg"
+    style="background-color: #009c96"
+    *ngIf="new3Book"
+  >
+    <img [src]="imgSrc + new3Book.image" alt="" class="img-thumbnail imgBook" />
+    <div class="content">
+      <p style="color: white">الأكثر طلباً</p>
+      <button
+        type="button"
+        class="btn btn3 mb-5"
+        [routerLink]="['/BookList', new3Book.id]"
+      >
+        اشتري الان
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="ff" *ngIf="get">
+  <div class="container">
+    <div class="row d-flex">
+      <div class="col-md-4 mt-5 col-12" *ngFor="let book of [1, 2, 3]">
+        <div class="card" aria-hidden="true">
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-6"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+﻿@model Post
+@{
+    Layout = "_SideLayout";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/Post_Page_style.css">
+</head>
+
+<body>
+
+
+        <div class="cont">
+
+
+            <div class="content">
+                <div class="header">
+                    <div class="imageclock">
+                        <img src="images/Icon feather-clock.png" alt="">
+                    </div>
+                    <div class="date">
+                        <p>@Model.CreatedAt</p>
+                    </div>
+                </div>
+
+
+                <p class="title">@Model.Title</p>
+                <p class="bodyPara">@Model.Detailes</p>
+
+            </div>
+<div class="blogContent">
+    <p class="elements">Elements</p>
+            <h1>Level 1 Heading</h1>
+            <h2>Level 2 Heading</h2>
+            <h3>Level 3 Heading</h3>
+            <h4>Level 4 Heading</h4>
+            <h5>Level 5 Heading</h5>
+            <h6>Level 6 Heading</h6>
+
+            <p class="paraContent">This is a regular paragraph at 16px. The entire font of the template is 16px unless it's a heading wich is shown above. </p>
+</div>
+
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+﻿@model Post
+@{
+}
+<head> 
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head> 
+
+<div class="container p-3 my-3 border">
+    <h1>Post Details</h1>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            Title
+        </dt>
+        <dd class="col-sm-9">
+            @Model.Title
+        </dd>
+        <dt class="col-sm-3">
+            Detailes
+        </dt>
+        <dd class="col-sm-9">
+            @Model.Detailes
+        </dd>
+
+        <dt class="col-sm-3">
+            CreatedAt
+        </dt>
+        <dd class="col-sm-9">
+            @Model.CreatedAt
+        </dd>
+    </dl>
+    <div>
+        <a class="btn btn-danger" asp-action="Index">Back</a>
+    </div>
+</div>

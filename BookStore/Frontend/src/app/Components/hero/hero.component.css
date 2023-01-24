@@ -1,0 +1,25 @@
+.para h5 {
+  padding-top: 100px;
+  padding-left: 200px;
+}
+.im {
+  width: 70%;
+}
+
+@media (max-width: 1000px) {
+  .mom {
+    flex-direction: column;
+    width: 100%;
+  }
+  .im {
+    width: 100%;
+  }
+  .para {
+    width: 100%;
+    padding-right: 0px;
+    padding-bottom: 20px;
+  }
+  .para h5 {
+    padding: 49px;
+  }
+}

@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Shared\_sideBarLayout.cshtml" />
+    <Content Remove="Views\Shared\_ValidationScriptsPartial.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\Photos\84d7799f-ff2e-44ae-a189-f2005a2b5119.jpg" />
+    <Content Include="wwwroot\Photos\d71f5837-ad0e-461b-8165-c5e5b9ed5950.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="wwwroot\Photos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Photos\02d1e0c9-2f6a-4c2c-82f0-a63f93e37c48.jpg" />
+    <None Include="wwwroot\Photos\578919f5-c167-4766-aeb5-12806eeb584a.jpg" />
+    <None Include="wwwroot\Photos\81e34bb0-648e-459c-a920-98518253dd08.jpg" />
+    <None Include="wwwroot\Photos\843ab024-c3d5-447e-a6b9-3e0df63d136c.png" />
+    <None Include="wwwroot\Photos\a06da9d2-defc-4429-bab3-a5770096e321.jpg" />
+    <None Include="wwwroot\Photos\a1ef7bbf-2de5-46ff-a23d-19daa6f284e4.jpg" />
+    <None Include="wwwroot\Photos\Hello.png" />
+  </ItemGroup>
+
+</Project>

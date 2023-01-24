@@ -1,0 +1,17 @@
+.bookimg {
+  height: 240px;
+}
+.ff {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1000px) {
+  .bookimg {
+    height: 350px;
+  }
+  .ff {
+    display: flex;
+    flex-direction: column;
+  }
+}

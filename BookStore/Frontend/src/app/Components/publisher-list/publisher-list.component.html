@@ -1,0 +1,39 @@
+<ngx-loading-bar></ngx-loading-bar>
+
+<div
+  class="mt-2 p-2"
+  style="background-color: #019a95; color: white; padding-left: 20px"
+>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item" style="padding-right: 100px">
+        <a>الرئيسية</a>
+      </li>
+      <li
+        class="breadcrumb-item active"
+        aria-current="page"
+        style="color: white"
+      >
+        دور النشر
+      </li>
+    </ol>
+  </nav>
+</div>
+<div class="container mt-5">
+  <div class="row mb-5">
+    <div
+      class="card col-md-2 ms-2 text-center"
+      style="width: 170px; display: flex; flex-direction: row"
+      *ngFor="let pub of loadedpublisher"
+    >
+      <div class="card-body">
+        <img
+          [src]="imgSrc + pub.logo"
+          alt="ded"
+          style="width: 100px; height: 100px"
+        />
+        <h1 class="pt-5">{{ pub.name }}</h1>
+      </div>
+    </div>
+  </div>
+</div>

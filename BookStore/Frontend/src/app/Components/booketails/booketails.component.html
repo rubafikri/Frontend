@@ -1,0 +1,218 @@
+<ngx-loading-bar></ngx-loading-bar>
+
+<ng-container *ngIf="book">
+  <div
+    class="mt-2 p-2"
+    style="background-color: #019a95; color: white; padding-left: 20px"
+  >
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item" style="padding-right: 100px">
+          <a>الرئيسية</a>
+        </li>
+        <li
+          class="breadcrumb-item active"
+          aria-current="page"
+          style="color: white"
+        >
+          شراء
+        </li>
+        <li
+          class="breadcrumb-item active"
+          aria-current="page"
+          style="color: white"
+        >
+          كتاب
+        </li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-12 ff">
+        <img [src]="imgSrc + book.image" alt="" width="270px" height="400px" />
+        <div class="col-md-5 mt-5 col-12 pe-3">
+          <h4>{{ book.name }}</h4>
+          <p>{{ book.author.name }}</p>
+
+          <div class="stars">
+            <ngb-rating
+              [(rate)]="currentRate"
+              [max]="5"
+              class="color"
+              [readonly]="true"
+              style="color: rgb(255, 255, 0)"
+            ></ngb-rating>
+            ({{ currentRate }})
+          </div>
+
+          <div class="d-flex" style="justify-items: first baseline">
+            <p class="fw-bolder w-50">دار النشر :</p>
+            <p>{{ book.publisher.name }}</p>
+          </div>
+          <div class="d-flex">
+            <p class="fw-bolder w-50">اسم المؤلف :</p>
+            <p>{{ book.author.name }}</p>
+          </div>
+          <div class="d-flex">
+            <p class="fw-bolder w-50">المترجم :</p>
+            <p>احمد</p>
+          </div>
+          <div class="d-flex">
+            <p class="fw-bolder w-50">سنة النشر :</p>
+            <p>{{ book.publishYear }}</p>
+          </div>
+          <div class="d-flex">
+            <p class="fw-bolder w-50">عدد الصفحات :</p>
+            <p>{{ book.pageCount }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-12">
+        <div
+          class="card pt-3 mt-5"
+          style="width: 25rem; height: 20rem; background-color: #e1e1e1"
+        >
+          <div
+            class="d-flex flex-row mt-5"
+            style="justify-content: space-evenly"
+          >
+            <h4 class="card-title" style="color: #019a95; font-weight: bold">
+              سعر الكتاب
+            </h4>
+            <div class="d-flex flex-row">
+              <h4 class="card-title" style="color: #153e76; font-weight: bold">
+                {{ book.price }}.00$
+              </h4>
+              <h5
+                class="card-title"
+                style="color: grey; font-weight: bold"
+                *ngIf="book.discount > 0"
+              >
+                {{ book.discount }}.00$
+              </h5>
+            </div>
+          </div>
+          <form [formGroup]="SaleForm" (ngSubmit)="makeSale()">
+            <div
+              class="d-flex flex-row mt-5"
+              style="justify-content: space-evenly"
+            >
+              <h4 class="card-title" style="color: #019a95; font-weight: bold">
+                الكمية
+              </h4>
+              <input
+                type="number"
+                formControlName="amount"
+                class="form-control"
+                style="width: 100px"
+              />
+            </div>
+            <div
+              class="d-flex flex-row mt-4"
+              style="justify-content: space-evenly"
+            >
+              <div
+                class="d-flex flex-row mt-4"
+                style="justify-content: space-evenly"
+              >
+                <button
+                  type="submit"
+                  class="btn"
+                  style="background-color: #019a95; width: 150px"
+                >
+                  <img src="./assets/4.png" alt="" width="30px" />
+                  <span style="color: white"> اشتري الآن </span>
+                </button>
+              </div>
+              <div>
+                <a
+                  *ngIf="adedd == false"
+                  class="btn mt-4"
+                  style="background-color: #019a95; width: 150px"
+                  (click)="addToFavorite(book.id)"
+                  >🤍
+                  <span style="color: white"> اضف الى المفضلة </span>
+                </a>
+                <a
+                  *ngIf="adedd == true"
+                  class="btn mt-4"
+                  style="background-color: #019a95; width: 150px"
+                  (click)="remove(book.id)"
+                  >❤️
+                  <span style="color: white"> إزالة من المضلة </span>
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5 mb-5">
+      <ul ngbNav #nav="ngbNav" class="nav-tabs">
+        <li ngbNavItem>
+          <a ngbNavLink>حول الكتاب </a>
+          <ng-template ngbNavContent>
+            <div class="row mt-5 mb-3">
+              <div class="card-body">
+                <p class="card-text">
+                  {{ book.about }}
+                </p>
+              </div>
+            </div>
+          </ng-template>
+        </li>
+        <li ngbNavItem>
+          <a ngbNavLink>تقييم القراء للكتاب </a>
+          <ng-template ngbNavContent>
+            <h1></h1>
+            <div class="stars" *ngFor="let rr of bookReview">
+              <ngb-rating
+                [(rate)]="rr.rate"
+                [max]="5"
+                class="color"
+                [readonly]="true"
+                style="color: rgb(255, 255, 0)"
+              ></ngb-rating>
+              ({{ rr.rate }})
+              <h2>{{ rr.comment }}</h2>
+            </div>
+          </ng-template>
+        </li>
+        <li ngbNavItem>
+          <a ngbNavLink>تقييم الكتاب </a>
+          <ng-template ngbNavContent>
+            <form [formGroup]="RatingForm" (ngSubmit)="onSubmit()">
+              <ngb-rating
+                [(rate)]="initialRate"
+                formControlName="rating"
+                [max]="5"
+                class="color"
+                style="color: rgb(255, 255, 0)"
+              ></ngb-rating>
+              ({{ initialRate }})
+              <textarea
+                type="text"
+                placeholder="أضف تعليق عن الكتاب "
+                class="form-control"
+                formControlName="comment"
+              ></textarea>
+              <button type="submit" class="btn btn-primary mt-4">
+                اضف تعليق
+              </button>
+            </form>
+          </ng-template>
+          <ng-template ngbNavContent>
+            <h1 style="color: red; font-weight: bolder">
+              لا يمكنك تقييم الكتاب إلا إذا قمت بشراءه
+            </h1>
+          </ng-template>
+        </li>
+      </ul>
+
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+    </div>
+  </div>
+</ng-container>

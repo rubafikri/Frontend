@@ -1,0 +1,29 @@
+﻿@model AddPostsVM
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<head> 
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>   
+
+
+<form asp-action="Add" method="post" asp-controller="Post"  enctype="multipart/form-data" style= "padding: 35px">
+  <div class="form-group">
+    <label asp-for="Title"></label>
+    <input asp-for="Title" class="form-control" id="formGroupExampleInput">
+  </div>
+  <div class="form-group">
+    <label asp-for="CreatedAt" style="padding-top: 30px"></label>
+    <input  class="form-control" id="formGroupExampleInput2" asp-for="CreatedAt" type="date">
+  </div>
+   <div class="form-group">
+    <label  asp-for="Detailes" style="padding-top: 30px"></label>
+    <input class="form-control"  asp-for="Detailes">
+  </div>
+    <button type="submit" class="btn btn-primary" value="Add Post " style="margin-top: 30px; width: 100%">Add Post</button>
+
+</form>
+

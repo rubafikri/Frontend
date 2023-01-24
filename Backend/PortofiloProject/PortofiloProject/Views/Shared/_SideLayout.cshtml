@@ -1,0 +1,126 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+@*    <link rel="stylesheet" href="~/css/SideLayout.css">
+*@</head>
+<style>
+    body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 100%;
+}
+
+.left {
+    background-color: #F6F6F6;
+    position: fixed;
+    width: 300px;
+    height: 400px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+}
+.profileImg {
+    padding: 50px 50px 0px 50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.name {
+    font-size: 25px;
+    padding-left: 50px;
+}
+
+.job {
+    font-size: 15px;
+    padding-left: 50px;
+    color: #3F3D56;
+}
+
+.socialIcons {
+    padding-left: 50px;
+    align-items: center;
+}
+
+    .socialIcons img {
+        width: 30px;
+        padding-right: 10px;
+    }
+
+    @@media screen and (max-width : 700px) {
+    body {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        margin: auto;
+        position: relative;
+        min-width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .name {
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .job {
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .socialIcons {
+        padding-left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+}
+
+</style>
+<body>
+        <div class="left">
+            <div class="sideBar">
+                <div class="personimg">
+                    <img src="images/Rectangle 2.jpg" alt=""  style=" padding: 50px 50px 0px 50px; border-radius: 25px;">
+                </div>
+                <div class="personal">
+
+                    <p class="name" style="font-size: 25px; padding-left: 50px;">Ruba Fikri </p>
+                    <p class="job">Web Developer trainee <br>rubafikri@@gmail.com</p>
+                    <div class="socialIcons">
+                        <img src="images/Icon simple-dribbble.png" alt="">
+                        <img src="images/Icon awesome-twitter.png" alt="">
+                        <img src="images/Icon awesome-behance.png" alt="">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
+

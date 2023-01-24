@@ -1,0 +1,22 @@
+<ngx-loading-bar></ngx-loading-bar>
+
+<div class="container">
+  <div class="row mb-5 justify-content-center">
+    <div class="mt-3">
+      <h1 style="color: #019a95; font-weight: bolder">مشاهير الكتّاب</h1>
+    </div>
+    <div
+      class="card col-md-2 col-6 ms-2 text-center mb-3"
+      style="width: 170px; display: flex; flex-direction: row"
+      *ngFor="let pub of loaddedAuthors"
+    >
+      <div class="card-body">
+        <a [routerLink]="['/AuthorsBookList', pub.id]">
+          <img src="./assets/author.png" alt="ded" class="card-img-top"
+        /></a>
+
+        <h4 class="card-subtitle pt-5">{{ pub.name }}</h4>
+      </div>
+    </div>
+  </div>
+</div>

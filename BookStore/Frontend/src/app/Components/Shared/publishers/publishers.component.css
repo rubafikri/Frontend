@@ -1,0 +1,16 @@
+.pup {
+  width: 170px;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1000px) {
+
+    .pup {
+        width: 200px;
+        display: flex;
+        flex-direction: row;
+      } 
+}
+
+

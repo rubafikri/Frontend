@@ -1,0 +1,11 @@
+.bookimg{
+    height: 240px;
+}
+
+
+@media (max-width: 1000px) {
+    .bookimg{
+        height: 350px;
+    }
+
+}

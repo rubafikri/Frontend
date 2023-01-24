@@ -1,0 +1,51 @@
+<div class="row mt-3">
+  <div class="col-md-3 col-12">
+    <img src="./assets/Untitled-1.png" alt="Logo Picture" />
+  </div>
+  <div class="col-md-6 col-12 p-4">
+    <form class="example" [formGroup]="SearchForBooks">
+      <input
+        type="text"
+        placeholder="ابحث باسم الكتاب أو المؤلف"
+        name="search"
+        formControlName="searchKey"
+        [(ngModel)]="searchKey"
+      />
+      <a
+        ><button type="submit" (click)="search()">
+          <i class="fa fa-search"></i></button
+      ></a>
+    </form>
+  </div>
+  <div class="col-md-1 col-4 p-4">
+    <a [routerLink]="['profile']">
+      <img src="./assets/333.png" alt="Logo Picture" width="25px"
+    /></a>
+  </div>
+
+  <div class="col-md-1 col-4 pt-2 d-flex">
+    <app-cart-icon> </app-cart-icon>
+  </div>
+  <div class="col-md-1 col-4 p-4">
+    <a (click)="logOut()" *ngIf="saleService.isBtn" [routerLink]="['/']">
+      <button type="button" class="btn pt-3 ng-star-inserted">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          viewBox="0 0 18 18"
+          class="bi bi-box-arrow-left"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"
+          ></path>
+          <path
+            fill-rule="evenodd"
+            d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"
+          ></path>
+        </svg></button
+    ></a>
+  </div>
+</div>

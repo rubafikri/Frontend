@@ -1,0 +1,67 @@
+<div class="container mt-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a>الرئيسية</a></li>
+      <li class="breadcrumb-item active" aria-current="page">الفئات</li>
+    </ol>
+  </nav>
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="CategoryForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label class="form-label">اسم الفئة </label>
+          <input type="text" class="form-control" formControlName="name" />
+          <p *ngIf="!name.valid && name.touched">من فضلك أضف اسم فئة جديد</p>
+        </div>
+        <button type="submit" class="btn btn-primary m-4" *ngIf="updateded">
+          أضف فئة جديدة
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary m-4"
+          *ngIf="!updateded"
+          (click)="onUpdate()"
+        >
+          تعديل فئة
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <table class="table ms-5 table-responsive">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">اسم الفئة</th>
+        <th scope="col">تعديل</th>
+        <th scope="col">حذف</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cat of loadedCategory">
+        <td>{{ cat.id }}</td>
+        <td>{{ cat.name }}</td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="populateForm(cat)"
+          >
+            تعديل
+          </button>
+        </td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="onDeleteCategory(cat.id)"
+          >
+            حذف
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

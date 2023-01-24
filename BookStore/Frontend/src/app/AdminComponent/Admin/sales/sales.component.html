@@ -1,0 +1,45 @@
+<ng-container *ngIf="loadedSale">
+  <div class="col-md-10">
+    <table class="table ms-5 table-responsive">
+      <thead>
+        <tr>
+          <th scope="col">اسم الكتاب</th>
+          <th scope="col">سعر الكتاب</th>
+          <th scope="col">الكمية المطلوبة</th>
+          <th scope="col">الاجمالي</th>
+          <th scope="col">حالة الطلب</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sale of loadedSale">
+          <td>{{ sale.book.name }}</td>
+          <td>{{ sale.book.price }}</td>
+          <td>{{ sale.amount }}</td>
+          <td>{{ sale.totalPrice }}</td>
+
+          <td *ngIf="sale.isSold == 0">
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="onUpdate(sale.id)"
+            >
+              موافقة
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-success"
+              *ngIf="sale.isSold == 1"
+            >
+              تمت الموافقة
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
+<h1 *ngIf="!loadedSale">
+  لا يوجد بيانات لعرضها في السلة يرجى الذهاب وإضافة كتب جديدة
+</h1>

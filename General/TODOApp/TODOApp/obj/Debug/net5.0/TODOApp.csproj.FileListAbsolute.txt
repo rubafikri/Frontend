@@ -1,0 +1,16 @@
+C:\Users\acer\source\repos\TODOApp\TODOApp\bin\Debug\net5.0\TODOApp.exe
+C:\Users\acer\source\repos\TODOApp\TODOApp\bin\Debug\net5.0\TODOApp.deps.json
+C:\Users\acer\source\repos\TODOApp\TODOApp\bin\Debug\net5.0\TODOApp.runtimeconfig.json
+C:\Users\acer\source\repos\TODOApp\TODOApp\bin\Debug\net5.0\TODOApp.runtimeconfig.dev.json
+C:\Users\acer\source\repos\TODOApp\TODOApp\bin\Debug\net5.0\TODOApp.dll
+C:\Users\acer\source\repos\TODOApp\TODOApp\bin\Debug\net5.0\TODOApp.pdb
+C:\Users\acer\source\repos\TODOApp\TODOApp\obj\Debug\net5.0\TODOApp.csproj.AssemblyReference.cache
+C:\Users\acer\source\repos\TODOApp\TODOApp\obj\Debug\net5.0\TODOApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\acer\source\repos\TODOApp\TODOApp\obj\Debug\net5.0\TODOApp.AssemblyInfoInputs.cache
+C:\Users\acer\source\repos\TODOApp\TODOApp\obj\Debug\net5.0\TODOApp.AssemblyInfo.cs
+C:\Users\acer\source\repos\TODOApp\TODOApp\obj\Debug\net5.0\TODOApp.csproj.CoreCompileInputs.cache
+C:\Users\acer\source\repos\TODOApp\TODOApp\obj\Debug\net5.0\TODOApp.dll
+C:\Users\acer\source\repos\TODOApp\TODOApp\obj\Debug\net5.0\refint\TODOApp.dll
+C:\Users\acer\source\repos\TODOApp\TODOApp\obj\Debug\net5.0\TODOApp.pdb
+C:\Users\acer\source\repos\TODOApp\TODOApp\obj\Debug\net5.0\TODOApp.genruntimeconfig.cache
+C:\Users\acer\source\repos\TODOApp\TODOApp\obj\Debug\net5.0\ref\TODOApp.dll

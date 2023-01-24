@@ -1,0 +1,17 @@
+<div class="cont">
+  <div class="content" *ngFor="let post of posts">
+    <div class="header">
+      <div class="imageclock">
+        <img src="./assets/Icon feather-clock.png" alt="" />
+      </div>
+      <div class="date">
+        <p>{{ post.date }}</p>
+      </div>
+    </div>
+
+    <p class="title">{{ post.postTitle }}</p>
+    <p class="bodyPara">
+      {{ post.postBody }}<a [routerLink]="['/posts', post.id]">Read More</a>
+    </p>
+  </div>
+</div>

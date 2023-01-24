@@ -1,0 +1,35 @@
+﻿@model Project
+@{
+}
+<head> 
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head> 
+
+<div class="container p-3 my-3 border">
+    <h1>Post Details</h1>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            Title
+        </dt>
+        <dd class="col-sm-9">
+            @Model.Title
+        </dd>
+        <dt class="col-sm-3">
+            Image
+        </dt>
+        <dd class="col-sm-9">
+             <img src=~/Photos/@Model.ImageName alt="" asp-append-version="true" width="80px" height="80px">
+        </dd>
+
+        <dt class="col-sm-3">
+            CreatedAt
+        </dt>
+        <dd class="col-sm-9">
+            @Model.Body
+        </dd>
+    </dl>
+    <div>
+        <a class="btn btn-danger" asp-action="Index">Back</a>
+    </div>
+</div>

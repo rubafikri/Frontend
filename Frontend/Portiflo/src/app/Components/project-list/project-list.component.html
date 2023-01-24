@@ -1,0 +1,8 @@
+<div class="cont">
+  <div class="content">
+    <div class="projectImage" *ngFor="let proj of project">
+      <a href=""> <img [src]="proj.projectImage" alt="" /></a>
+      <p>{{proj.projectName}}</p>
+    </div>
+  </div>
+</div>

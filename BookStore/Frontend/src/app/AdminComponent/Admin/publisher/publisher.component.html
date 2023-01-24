@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form [formGroup]="AddPublisherForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="name">اسم دار النشر</label>
+          <input
+            formControlName="name"
+            class="form-control"
+            type="text"
+            id="name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="logo">شعار دار النشر</label>
+          <input
+            (change)="onFileChange($event)"
+            formControlName="file"
+            class="form-control"
+            type="file"
+            id="logo"
+          />
+        </div>
+        <div class="mb-4">
+          <div class="progress">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-label="Example with label"
+              [ngStyle]="{ width: progressValue }"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              {{ progressValue }}
+            </div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <img
+            alt="helo"
+            class="img-thumbnail"
+            [src]="imageSrc || 'https://via.placeholder.com/200'"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary" *ngIf="updateded">
+          اضافة دار النشر
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary m-4"
+          *ngIf="!updateded"
+          (click)="onUpdate()"
+        >
+          تعديل فئة
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <table class="table ms-5 table-responsive">
+    <thead>
+      <tr>
+        <th scope="col">اسم دار النشر</th>
+        <th scope="col">شعار دار النشر</th>
+        <th scope="col">تعديل</th>
+        <th scope="col">حذف</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let publisher of loadedPublisher">
+        <td>{{ publisher.name }}</td>
+        <td>
+          <img
+            [src]="imgSrc + publisher.logo"
+            alt="lkjhgf"
+            style="width: 40px"
+          />
+        </td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="populateForm(publisher)"
+          >
+            تعديل
+          </button>
+        </td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="onDeletePublisher(publisher.id)"
+          >
+            حذف
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

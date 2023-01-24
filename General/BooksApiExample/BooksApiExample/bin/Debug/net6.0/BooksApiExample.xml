@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BooksApiExample</name>
+    </assembly>
+    <members>
+        <member name="M:BooksApiExample.Controllers.BookController.Get">
+            <summary>
+            Get All Books from Database
+            </summary>
+            <returns>List of books </returns>
+            <response code="200">Getting books done</response>
+            <response code="404">Books Not Found</response>
+        </member>
+        <member name="M:BooksApiExample.Controllers.BookController.Get(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BooksApiExample.Controllers.BookController.Post(BooksApiExample.Models.Book)">
+             <summary>
+             Adds New Book 
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Book
+                 {
+                    "id": 1,
+                    "Title": "Book 1"
+                 }
+            
+             </remarks>
+             <param name="book"> Book </param>
+             <returns></returns>
+             <response code="200">Successfully Added Book</response>
+        </member>
+    </members>
+</doc>

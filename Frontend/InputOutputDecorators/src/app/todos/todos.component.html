@@ -1,0 +1,26 @@
+<div class="row">
+  <p class="text-center para mt-2" >Total task for today {{count}} tasks</p>
+  <div class="col-md-12">
+    <app-add-todo (todoAdded)="onTodoAdded($event)" *ngIf="showAddForm">
+    </app-add-todo>
+  </div>
+  <div class="col-md-12">
+    <app-edit-todo
+      *ngIf="showEditForm"
+      [todo]="edittedTodo"
+      (todoUpdated)="onUpdatedTodo($event)"
+    ></app-edit-todo>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <app-single-todo
+      *ngFor="let todo of todos"
+      [todo]="todo"
+      (todoEditted)="onTodoEditted($event)"
+      (todoDeleted)="removeItem($event)"
+      [ngClass]="{ 'redClass' : importantOrNot(todo)}"
+      ></app-single-todo>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<ngx-loading-bar></ngx-loading-bar>
+<ng-container *ngIf="userFound">
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card" style="height: 100%">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-md-6">معلومات الحساب</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text fw-bold ng-star-inserted">
+              اسم الاول: {{ user.firstName }}
+            </p>
+            <p class="card-text fw-bold ng-star-inserted">
+              اسم الاخير: {{ user.lastName }}
+            </p>
+            <p class="card-text fw-bold ng-star-inserted">
+              اسم المستخدم : {{ user.email }}
+            </p>
+            <p class="card-text fw-bold ng-star-inserted">
+              البريد الالكتروني : {{ user.email }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="!userFound">
+  <app-login></app-login>
+</ng-container>

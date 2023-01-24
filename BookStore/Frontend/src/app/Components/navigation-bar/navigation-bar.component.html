@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <ul class="nav-links">
+    <input type="checkbox" id="checkbox_toggle" />
+    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    <div class="menu">
+      <li><a [routerLink]="['/']">الرئيسية </a></li>
+      <li><a [routerLink]="['BookList']">اخترنا لكم </a></li>
+      <li class="services">
+        <a [routerLink]="['Authors']">مشاهير الكتاب</a>
+      </li>
+      <li><a [routerLink]="['CallUs']">اتصل بنا </a></li>
+      <li><a [routerLink]="['UserFav']" *ngIf="userFound">المفضلة</a></li>
+    </div>
+  </ul>
+</nav>

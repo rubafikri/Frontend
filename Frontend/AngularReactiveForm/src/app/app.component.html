@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-8">
+      <form [formGroup]="projectform" (ngSubmit)="onSubmit()">
+        <div>
+          <label class="form-label">Project Name</label>
+          <input
+            type="text"
+            formControlName="projectName"
+            class="form-control"
+          />
+          <p *ngIf="projectName.errors?.['required'] && projectName.touched">
+            Project Name is required
+          </p>
+          <p *ngIf="projectName.errors?.['nameIsForbidden']">
+            Test is not allowed
+          </p>
+        </div>
+        <div>
+          <label class="form-label">Mail</label>
+          <input type="text" formControlName="mail" class="form-control" />
+          <p *ngIf="!mail.valid && mail.touched">Enter Valid Mail</p>
+        </div>
+        <div>
+          <label class="form-label"> Project Status </label>
+          <select name="drop" class="form-select">
+            <option value="Advanced">Stable</option>
+            <option value="Basic">Critical</option>
+            <option value="Pro">Finished</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

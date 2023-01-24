@@ -1,0 +1,193 @@
+body,
+html {
+
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 100%;
+
+}
+
+.left {
+    background-color: #F6F6F6;
+    position: fixed;
+    width: 300px;
+    height: 400px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.secondrow {
+    display: flex;
+    flex-direction: row;
+}
+
+.cont {
+    margin-left: 320px;
+    padding-left: 30px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profileImg {
+    padding: 50px 50px 0px 50px;
+}
+
+.name {
+    font-size: 25px;
+    padding-left: 50px;
+
+}
+
+.job {
+    font-size: 15px;
+    padding-left: 50px;
+    color: #3F3D56;
+
+}
+
+.socialIcons {
+    padding-left: 50px;
+    align-items: center;
+
+}
+
+.socialIcons img {
+    width: 30px;
+    padding-right: 10px;
+}
+
+.content img {
+    width: 250px;
+    padding-right: 20px;
+    padding-bottom: 35px;
+}
+.projectImage{
+    transition: .3s ease;
+
+}
+.projectImage:hover{
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+.projectImage1{
+    transition: .3s ease;
+
+}
+.projectImage1:hover{
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
+.secondrow img {
+    width: 250px;
+    padding-right: 20px;
+}
+
+@media screen and (max-width : 700px) {
+    body {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        margin: auto;
+        position: relative;
+        min-width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        flex-direction: column;
+        /* max-width: 100%; */
+    }
+
+    .secondrow {
+        flex-direction: column;
+    }
+
+    .name {
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .job {
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .socialIcons {
+        padding-left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .personimg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cont {
+        /* align-items: center; */
+        justify-items: center;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .projectImage {
+        width: 100%;
+        padding-right: 0px;
+
+    }
+
+    .projectImage1 {
+        width: 100%;
+        padding-right: 0px;
+
+    }
+
+    .content img {
+        padding-bottom: 20px;
+        padding-right: 0px;
+        padding-top: 0px;
+    }
+
+    .secondrow img {
+        padding-bottom: 20px;
+        padding-right: 0px;
+        padding-top: 0px;
+    }
+}

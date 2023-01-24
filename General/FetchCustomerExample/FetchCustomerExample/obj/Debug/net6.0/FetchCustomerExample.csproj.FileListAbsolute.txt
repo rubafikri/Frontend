@@ -1,0 +1,52 @@
+E:\C# project\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\appsettings.Development.json
+E:\C# project\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\appsettings.json
+E:\C# project\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\FetchCustomerExample.staticwebassets.runtime.json
+E:\C# project\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\FetchCustomerExample.exe
+E:\C# project\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\FetchCustomerExample.deps.json
+E:\C# project\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\FetchCustomerExample.runtimeconfig.json
+E:\C# project\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\FetchCustomerExample.dll
+E:\C# project\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\FetchCustomerExample.pdb
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.csproj.AssemblyReference.cache
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.AssemblyInfoInputs.cache
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.AssemblyInfo.cs
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.csproj.CoreCompileInputs.cache
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.MvcApplicationPartsAssemblyInfo.cache
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.RazorAssemblyInfo.cache
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.RazorAssemblyInfo.cs
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\staticwebassets.build.json
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\staticwebassets.development.json
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\scopedcss\bundle\FetchCustomerExample.styles.css
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\scopedcss\projectbundle\FetchCustomerExample.bundle.scp.css
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.dll
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\refint\FetchCustomerExample.dll
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.pdb
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.genruntimeconfig.cache
+E:\C# project\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\ref\FetchCustomerExample.dll
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\appsettings.json
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\FetchCustomerExample.staticwebassets.runtime.json
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\FetchCustomerExample.exe
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\FetchCustomerExample.deps.json
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\FetchCustomerExample.runtimeconfig.json
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\FetchCustomerExample.dll
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\bin\Debug\net6.0\FetchCustomerExample.pdb
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.csproj.AssemblyReference.cache
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.AssemblyInfoInputs.cache
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.AssemblyInfo.cs
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.csproj.CoreCompileInputs.cache
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.RazorAssemblyInfo.cache
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.RazorAssemblyInfo.cs
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\scopedcss\bundle\FetchCustomerExample.styles.css
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\scopedcss\projectbundle\FetchCustomerExample.bundle.scp.css
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.dll
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\refint\FetchCustomerExample.dll
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.pdb
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\FetchCustomerExample.genruntimeconfig.cache
+C:\Users\acer\OneDrive\Documents\GitHub\RubaFikri\General\FetchCustomerExample\FetchCustomerExample\obj\Debug\net6.0\ref\FetchCustomerExample.dll

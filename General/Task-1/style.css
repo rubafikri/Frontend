@@ -1,0 +1,126 @@
+.card-1{
+  background-color: hsl(300, 43%, 22%);
+  width: 100%;
+  margin-top: 5px;
+}
+
+.title1 {
+  color: darkmagenta;
+  
+}
+
+.review {
+  font-weight: 700;
+}
+.cardimg{
+  margin-left: 2rem ;
+  width: 3rem; 
+  height:3rem;
+  
+}
+.personName{
+  color: white; 
+  line-height: 1;
+  margin-left: 1rem;
+  font-size: 14px;
+  margin-top: 0.5rem;
+}
+
+.opinion{
+  font-size: 14px;
+  color:white; 
+  margin-left: 35px; 
+  margin-right: 40px; 
+  margin-top: 0.5rem; 
+  margin-bottom: 20px;
+}
+
+body{
+  background-image: url("images/bg-pattern-top-desktop.svg"),url("images/bg-pattern-bottom-desktop.svg") ;
+  background-position: left top,right bottom; 
+  background-repeat: no-repeat , no-repeat;
+}
+.stars {
+padding: 1rem;
+}
+.review-box {
+  background-color:  hsl(300, 24%, 96%);
+  width: 80%;
+
+}
+.review-box-1 {
+  background-color:  hsl(300, 24%, 96%);
+  width: 80%;
+  margin-left: 40px;
+}
+.review-box-2 {
+  background-color:  hsl(300, 24%, 96%);
+  width: 80%;
+  margin-left: 70px;
+} 
+.card-1{
+  background-color: hsl(300, 43%, 22%);
+  width: 100%;
+ 
+}
+.card-2{
+  background-color: hsl(300, 43%, 22%);
+  width: 100%;
+  margin-top: 20px;
+}
+.card-3{
+  background-color: hsl(300, 43%, 22%);
+  width: 100%;
+  margin-top: 40px;
+}
+@media screen and ( max-width: 720px) {
+    body{
+        background-image: url("images/bg-pattern-top-mobile.svg"),url("images/bg-pattern-bottom-mobile.svg") ;
+        background-position: left top,right bottom; 
+        background-repeat: no-repeat , no-repeat;
+    }
+    
+    .title1, .title2 {
+      text-align: center !important;
+    }
+    .stars{
+      padding-top: 10px;
+    }
+ 
+    .review-box {
+        background-color:  hsl(300, 24%, 96%);
+        width: 100%;
+        margin-top: none;
+        flex-direction: column;
+    
+      }
+      .review-box-1 {
+        background-color:  hsl(300, 24%, 96%);
+        width: 100%;
+        margin-left: 0px;
+        flex-direction: column;
+       
+      }
+      .review-box-2 {
+        background-color:  hsl(300, 24%, 96%);
+        width: 100%;
+        margin-left: 0px;
+        flex-direction: column;
+        
+      } 
+      .card-2{
+        background-color: hsl(300, 43%, 22%);
+        width: 100%;
+        margin-top: 20px;
+      }
+      .card-3{
+        background-color: hsl(300, 43%, 22%);
+        width: 100%;
+        margin-top: 20px;
+      }
+    
+  }
+
+
+
+ 

@@ -1,0 +1,49 @@
+.ff {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  margin-left: 10px;
+}
+.gg {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  margin-left: 10px;
+}
+.allcontent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content {
+  padding-top: 160px;
+  padding-right: 15px;
+}
+p {
+  font-size: large;
+}
+.btn1 {
+  background-color: #9c0021;
+  color: white;
+}
+.btn2 {
+  background-color: #062754;
+  color: white;
+}
+.btn3 {
+  background-color: #026c68;
+  color: white;
+}
+.imgBook {
+  width: 170px;
+  margin: 10px;
+}
+button {
+  margin-left: 10px;
+}
+@media (max-width: 1000px) {
+  .ff {
+    display: flex;
+    flex-direction: column;
+  }
+}

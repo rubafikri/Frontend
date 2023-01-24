@@ -1,0 +1,62 @@
+﻿@model List<Post> 
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_SideLayout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/Post_list.css">
+
+
+</head>
+
+
+<body>
+  
+
+    <div class="cont"  style="margin-left: 300px;">
+
+        <div class="content">
+         
+  
+     @foreach (var item in Model)
+     {
+              <div class="header">
+                    <div class="imageclock">
+                        <img src="images/Icon feather-clock.png" alt=""  style=" width: 20px; height: 20px;">
+                    </div>
+                    <div class="date" style="padding-top: 17px;">
+                        <p>@item.CreatedAt</p>
+                    </div>
+                </div>
+
+
+                <p class="title" style="padding-left: 0px; margin-left: 0px">@item.Title</p>
+                            <p class="bodyPara"> @item.Detailes<a asp-action="View" asp-route-id="@item.Id">Read More</a>
+                </p>
+
+
+               
+
+     }
+           
+         
+         
+        </div>
+        </div>
+
+
+
+</body>
+
+</html>

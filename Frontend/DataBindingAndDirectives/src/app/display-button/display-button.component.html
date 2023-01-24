@@ -1,0 +1,12 @@
+<button class="btn btn-primary" (click)="onShowHidePara()">Display Details</button>
+<p *ngIf="showPara">{{ para }}</p>
+
+<ul>
+  <li
+    [ngClass]="{ blueClass: action >= 5 }"
+    [ngStyle]="{ backgroundColor: action >= 5 ? 'blue' : 'transparent' }"
+    *ngFor="let action of actionNumbers"
+  >
+    {{ action }}
+  </li>
+</ul>

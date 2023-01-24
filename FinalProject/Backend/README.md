@@ -1,0 +1,9 @@
+- Admin Side:
+  - Add Page.
+  - Edit Page
+  - Show Page.
+  - Login Page.
+- Functional Requirments:
+  - Make CRUD operation on Category for recipes.
+  - Make CRUD operation on recipe.
+  - Manage Users.

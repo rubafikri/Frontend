@@ -1,0 +1,13 @@
+
+  .ff {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  @media (max-width: 1000px) {
+
+    .ff {
+      display: flex;
+      flex-direction: column;
+    }
+  }

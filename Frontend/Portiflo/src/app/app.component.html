@@ -1,0 +1,24 @@
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="sideBar">
+        <div class="personimg">
+          <img [src]="user.profileImage" alt="" class="profileImg" />
+        </div>
+        <div class="personal">
+          <p class="name">{{ user.userName }}</p>
+          <p class="job">{{ user.jobName }} <br />{{ user.userEmail }}</p>
+          <div class="socialIcons">
+            <img [src]="user.socialMediaIcons[0]" alt="" />
+            <img [src]="user.socialMediaIcons[1]" alt="" />
+            <img [src]="user.socialMediaIcons[2]" alt="" />
+          </div>
+          <a routerLink="/"> <p class="name">Home</p></a>
+          <a routerLink="posts"> <p class="name">Posts</p></a>
+          <a routerLink="projects"> <p class="name">Projects</p></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<router-outlet></router-outlet>

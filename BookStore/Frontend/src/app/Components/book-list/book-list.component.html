@@ -1,0 +1,198 @@
+<ngx-loading-bar></ngx-loading-bar>
+
+<div
+  class="mt-2 p-2"
+  style="background-color: #019a95; color: white; padding-left: 20px"
+>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item" style="padding-right: 100px">
+        <a>الرئيسية</a>
+      </li>
+      <li
+        class="breadcrumb-item active"
+        aria-current="page"
+        style="color: white"
+      >
+        الروايات
+      </li>
+    </ol>
+  </nav>
+</div>
+
+<div class="container mt-2">
+  <div class="col-md-3 col-12 mt-3">
+    <h1 style="color: #019a95; font-weight: bold">روايات</h1>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <div class="col-md-3 col-12 mt-2">
+    <h3 style="font-weight: bold">بحث</h3>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <form class="search ff" [formGroup]="SearchForBooks" (ngSubmit)="search()">
+      <div class="col-md-4 col-12 p-2">
+        <input
+          formControlName="searchKey"
+          type="text"
+          class="form-control"
+          placeholder="اسم الكتاب"
+          style="background-color: #e4e4e4"
+        />
+      </div>
+      <div class="col-md-4 col-12 p-2">
+        <input
+          formControlName="searchKey"
+          style="background-color: #e4e4e4"
+          type="text"
+          class="form-control"
+          placeholder="اسم الكاتب/ المؤلف "
+        />
+      </div>
+
+      <div class="col-md-4 col-12 p-2">
+        <button
+          type="submit"
+          class="btn"
+          style="background-color: #019a95; width: 130px; color: white"
+        >
+          بحث
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<ng-container *ngIf="get && !bookFound">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 mt-5 col-6" *ngFor="let book of loadedBooks">
+        <a [routerLink]="['/BookList', book.id]">
+          <img
+            [src]="imgSrc + book.image"
+            alt="ded"
+            class="img-thumbnail bookimg"
+          />
+        </a>
+        <div class="stars">
+          <ngb-rating
+            [(rate)]="book.rating"
+            [max]="5"
+            class="color"
+            [readonly]="true"
+            style="color: rgb(255, 255, 0)"
+          ></ngb-rating>
+          ({{ book.rating }})
+        </div>
+        <div class="name">
+          <p>{{ book.name }}</p>
+        </div>
+        <div class="price" style="display: flex; flex-direction: row">
+          <p>${{ book.price }}.00</p>
+          <p
+            style="
+              padding-right: 5px;
+              color: grey;
+              font-weight: 100;
+              font-size: small;
+              text-decoration: line-through;
+            "
+            *ngIf="book.discount > 0"
+          >
+            ${{ book.discount }}.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="!get">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 mt-5 col-6" *ngFor="let book of loadedBooks">
+        <div class="card" aria-hidden="true">
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-6"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="bookFound">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>لا يوجد عناصر متطابقة للبحث</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>انظر الى العناصر المتوفرة</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 mt-5" *ngFor="let book of loadedBooks">
+        <a [routerLink]="['/BookList', book.id]">
+          <img
+            [src]="imgSrc + book.image"
+            alt="ded"
+            class="img-thumbnail bookimg"
+          />
+        </a>
+        <div class="stars">
+          <ngb-rating
+            [(rate)]="book.rating"
+            [max]="5"
+            class="color"
+            [readonly]="true"
+            style="color: rgb(255, 255, 0)"
+          ></ngb-rating>
+          ({{ book.rating }})
+        </div>
+        <div class="name">
+          <p>{{ book.name }}</p>
+        </div>
+        <div class="price" style="display: flex; flex-direction: row">
+          <p>${{ book.price }}.00</p>
+          <p
+            style="
+              padding-right: 5px;
+              color: grey;
+              font-weight: 100;
+              font-size: small;
+              text-decoration: line-through;
+            "
+            *ngIf="book.discount > 0"
+          >
+            ${{ book.discount }}.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

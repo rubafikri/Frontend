@@ -1,0 +1,70 @@
+<ngx-loading-bar></ngx-loading-bar>
+<div class="container" style="background-color: #019a95; color: white">
+  <div class="row">
+    <div class="col-md-7">
+      <nav class="navbar navbar-expand-lg">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              style="color: white"
+              class="nav-link active"
+              aria-current="page"
+              [routerLink]="['/Authors']"
+              >مشاهير الكتّاب/
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" style="color: white"
+              >كتب الكاتب
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="authorBook">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 col-6 mt-3" *ngFor="let book of authorBook">
+        <a [routerLink]="['/BookList', book.id]">
+          <img
+            [src]="imgSrc + book.image"
+            alt="ded"
+            style="width: 150px; height: 200px"
+          />
+        </a>
+        <div class="stars">
+          <ngb-rating
+            [(rate)]="book.rating"
+            [max]="5"
+            class="color"
+            [readonly]="true"
+            style="color: rgb(255, 255, 0)"
+          ></ngb-rating>
+          ({{ book.rating }})
+        </div>
+        <div class="name">
+          <p>{{ book.name }}</p>
+        </div>
+        <div class="price" style="display: flex; flex-direction: row">
+          <p>${{ book.price }}.00</p>
+          <p
+            style="
+              padding-right: 5px;
+              color: grey;
+              font-weight: 100;
+              font-size: small;
+              text-decoration: line-through;
+            "
+            *ngIf="book.discount > 0"
+          >
+            ${{ book.discount }}.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

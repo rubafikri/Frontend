@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-8">
+      <form #signinForm="ngForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label class="form-label" for="User MAil"> User Mail </label>
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            ngModel
+            required
+            email
+            #email="ngModel"
+          />
+        </div>
+        <div>
+          <label class="form-label"> Dropown </label>
+          <select name="drop" [ngModel]="dropdowninit" class="form-select">
+            <option value="Advanced">Advanced</option>
+            <option value="Basic">Basic</option>
+            <option value="Pro">Pro</option>
+          </select>
+        </div>
+        <div>
+          <label class="form-label"> password </label>
+          <input
+            class="form-control"
+            name="password"
+            type="password"
+            ngModel
+            required
+            #password="ngModel"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        <p *ngIf="!isValid">Please fill valid inputs</p>
+      </form>
+    </div>
+
+    <div class="row justify-content-center" *ngIf="submitted">
+      <div class="col-md-8">
+        <h3>Your Data :</h3>
+        <p>Email : {{ user.email }}</p>
+        <p>Drop :{{ user.drop }}</p>
+        <p>Password : {{ user.password }}</p>
+      </div>
+    </div>
+  </div>
+</div>

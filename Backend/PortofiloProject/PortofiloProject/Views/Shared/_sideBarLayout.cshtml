@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/Main_page_style.css">
+</head>
+<body>
+        <div class="left">
+            <div class="sideBar">
+                <div class="personimg">
+                    <img src="images/image2.jpg" alt=""  style=" padding: 50px 50px 0px 50px; width: 200px; height: 200px; border-radius: 25px;">
+                </div>
+                <div class="personal">
+
+                    <p class="name">Ruba Fikri </p>
+                    <p class="job">Web Developer trainee <br>rubafikri@@gmail.com</p>
+                    <div class="socialIcons">
+                        <img src="images/Icon simple-dribbble.png" alt="">
+                        <img src="images/Icon awesome-twitter.png" alt="">
+                        <img src="images/Icon awesome-behance.png" alt="">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

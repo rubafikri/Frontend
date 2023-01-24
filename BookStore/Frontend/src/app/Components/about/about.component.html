@@ -1,0 +1,18 @@
+<ngx-loading-bar></ngx-loading-bar>
+
+<ng-container *ngIf="staticPage">
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-12" *ngFor="let staticPages of staticPage">
+        <h1>{{ staticPages.pageName }}</h1>
+        <div class="card mt-3 mb-5">
+          <div class="card-body">
+            <p class="card-text">
+              {{ staticPages.details }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

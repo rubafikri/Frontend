@@ -1,0 +1,30 @@
+<ngx-loading-bar></ngx-loading-bar>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="CallUsForm" (ngSubmit)="addCal()">
+        <div>
+          <label class="form-label">البريد الإلكتروني </label>
+          <input type="text" class="form-control" formControlName="email" />
+        </div>
+        <div>
+          <label class="form-label">الاسم الكامل </label>
+          <input type="text" class="form-control" formControlName="fullName" />
+        </div>
+        <div>
+          <label class="form-label">الرسالة </label>
+          <input type="text" class="form-control" formControlName="message" />
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary m-4"
+          [disabled]="!CallUsForm.valid"
+        >
+          اتصل بنا
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
